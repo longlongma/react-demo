@@ -1,4 +1,4 @@
 // babel插件相关信息
 {
-    "presets":["es2015","stage-0","react"]
+    "presets":["es2015","react"]
 }
