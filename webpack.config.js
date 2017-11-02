@@ -6,7 +6,7 @@ module.exports = {//注意这里是exports不是export
     entry:['webpack/hot/dev-server',__dirname + "/app/main.js"] ,//唯一入口文件，就像Java中的main方法
     output: {//输出目录
         path: __dirname + "/build",//打包后的js文件存放的地方
-        filename: "bundle.js"//打包后的js文件名
+        filename: '[name].bundle.js'//打包后的js文件名
     },
     module:{
         //loaders加载器
@@ -30,4 +30,5 @@ module.exports = {//注意这里是exports不是export
         port: 8080,//设置默认监听端口，如果省略，默认为"8080"
         //process: true,//显示合并代码进度
     }
+    
 };
