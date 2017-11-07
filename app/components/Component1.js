@@ -1,8 +1,16 @@
-import React from 'react';
+// import React from 'react';
+import React,{PropTypes} from 'react';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 class Component1 extends React.Component{
     render(){
         return(
-            <div>Hello dfgdsdfsdff是防守打法gworl！！！！</div>
+            <div>
+                <Header/>
+                <Main/>
+                <Footer/>
+            </div>
         )
     }
 }
