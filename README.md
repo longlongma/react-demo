@@ -36,10 +36,10 @@ npm install --save-dev webpack
 }
 ```
 
->注：package.json中的脚本部分已经默认在命令前添加了node_modules/.bin
+> 注：package.json中的脚本部分已经默认在命令前添加了node_modules/.bin
 路径，所以无论是全局还是局部安装的Webpack，你都不需要写前面那指明详细的路径了。
 
-最后，隐藏node_modules提交到git
+##### 4、隐藏node_modules提交到git
 （1）在文件夹中打开git bash
 （2）输入 git .gitignore，生成.gitignore文件
 （3）在编辑器中打开该文件，输入要隐藏提交的文件名

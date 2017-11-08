@@ -4,9 +4,7 @@ export default class Header extends React.Component{
     return(
       <div>
         <div className="header">
-          <p>
-            LOGO
-          </p>
+          <h3 className="title">react练习</h3>
         </div>
       </div>
     )
