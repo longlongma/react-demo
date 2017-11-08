@@ -44,6 +44,12 @@ npm install --save-dev webpack
 （2）输入 git .gitignore，生成.gitignore文件
 （3）在编辑器中打开该文件，输入要隐藏提交的文件名
 
+1、引入sass
+安装依赖 ：
+sass-loader
+node-sass
+style-loader
+
 
 
 

@@ -3,7 +3,11 @@ export default class Header extends React.Component{
   render(){
     return(
       <div>
-        我是头部
+        <div className="header">
+          <p>
+            LOGO
+          </p>
+        </div>
       </div>
     )
   }
