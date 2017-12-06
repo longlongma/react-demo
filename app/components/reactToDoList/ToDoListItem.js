@@ -5,7 +5,7 @@ export default class ToDoListItem extends React.Component{
             <div>
                     <li>
                        <input type="checkbox" />
-                       <span>找工作</span>
+                       <span>找工作ceshi</span>
                        <button>删除</button>
                     </li>
             </div>
