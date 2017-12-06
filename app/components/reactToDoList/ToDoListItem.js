@@ -3,7 +3,11 @@ export default class ToDoListItem extends React.Component{
     render(){
         return(
             <div>
-                    我是每一条
+                    <li>
+                       <input type="checkbox" />
+                       <span>找工作</span>
+                       <button>删除</button>
+                    </li>
             </div>
         )
     }

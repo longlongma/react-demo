@@ -1,9 +1,10 @@
 .header{
   height: 80px;
   width: 100%;
-  background-color: $blue-base;
+  background-color: $gray-base;
   .title{
     text-align: center;
     line-height: 80px;
+    color: $light-base;
   }
 }
