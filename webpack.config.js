@@ -19,7 +19,7 @@ module.exports = {//注意这里是exports不是export
             {
                 test: /\.(scss|css)$/,
                 use: ['style-loader','css-loader','sass-loader'],
-                exclude: /node_modules/,
+                // exclude: /node_modules/,                
             }
         ]
     },
