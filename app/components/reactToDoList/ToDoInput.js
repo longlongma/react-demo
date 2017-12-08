@@ -1,4 +1,6 @@
 import React,{PropTypes} from 'react';
+import {Button,Input,Row,Col,Form,notification} from 'antd';
+
 export default class ToDoInput extends React.Component{
     constructor(props){
         super(props);
@@ -12,8 +14,8 @@ export default class ToDoInput extends React.Component{
     render(){
         return(
             <div>
-                <input />
-                <button>提交</button>
+                <Input id="newItem" ref="newItem" type="text" placeholder="吃饭睡觉打豆豆"/>
+                <Button type="primary" className="pull-right" onClick={this.saveNewItem}> 提交</Button>
             </div>
         )
     }
