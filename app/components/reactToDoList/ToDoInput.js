@@ -8,8 +8,18 @@ export default class ToDoInput extends React.Component{
 
         }
     }
-    saveNewItem(){
-        
+    saveNewItem(e){
+        e.preventDefault();
+        let element = this.refs.newItem;
+        let task = element.value;
+        if(!task){
+            notification.open({
+                description:'输入内容不能为空',
+            });
+        }else{
+            this.props.saveNewItem(task);
+            element.value=""
+        }
     }
     render(){
         return(
