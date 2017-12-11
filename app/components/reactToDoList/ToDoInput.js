@@ -1,6 +1,6 @@
 import React,{PropTypes} from 'react';
-import {Button,Input,Row,Col,Form,notification} from 'antd';
-
+import {Button,Input,Form,Row,Col,Form,notification} from 'antd';
+import ReactDOM from 'react-dom';
 export default class ToDoInput extends React.Component{
     constructor(props){
         super(props);
@@ -10,7 +10,7 @@ export default class ToDoInput extends React.Component{
     }
     saveNewItem(e){
         e.preventDefault();
-        let element = this.refs.newItem;
+        let element = ReactDOM.findDOMNode(this.refs.newItem);
         let task = element.value;
         if(!task){
             notification.open({
@@ -24,8 +24,11 @@ export default class ToDoInput extends React.Component{
     render(){
         return(
             <div>
-                <Input id="newItem" ref="newItem" type="text" placeholder="吃饭睡觉打豆豆"/>
-                <Button type="primary" className="pull-right" onClick={this.saveNewItem}> 提交</Button>
+                <Form.Item>
+                    <Input id="newItem" ref="newItem" type="text" placeholder="吃饭睡觉打豆豆"/>
+                    <Button type="primary" className="pull-right" onClick={this.saveNewItem}> 提交</Button>
+                </Form.Item>
+                
             </div>
         )
     }
