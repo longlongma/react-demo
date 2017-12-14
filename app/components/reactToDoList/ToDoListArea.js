@@ -11,11 +11,11 @@ export default class ToDoListArea extends React.Component{
                 {
                     "id":"1",
                     "task":'做一个todolist',
-                    "compolete":"false"
+                    "complete":"false"
                 },{
                     "id":"2",
                     "task":'写政协管理员权限问题',
-                    "compolete":"false"
+                    "complete":"false"
                 }
             ],
         }
@@ -34,7 +34,7 @@ export default class ToDoListArea extends React.Component{
         let data = this.state.data;
         for(let item of data){
             if(item.id===taskId){
-                item.complete = item.compolete==="true"?"true":"false";
+                item.complete = item.complete==="true"?"false":"true";
             }
         }
         this.setState({data});
@@ -44,7 +44,7 @@ export default class ToDoListArea extends React.Component{
         data = data.filter((task)=>task.id!==taskId);
         this.setState({data});
     }
-    handleAddToDoItem(){
+    handleAddToDoItem(task){
         let newItem = {
             id:this.generateGUID(),
             task,
@@ -59,7 +59,7 @@ export default class ToDoListArea extends React.Component{
             <div className="todolist-area">
                <ToDoList 
                data={this.state.data} 
-               toggleCompolete={this.handleToggleComplete} 
+               toggleComplete={this.handleToggleComplete} 
                deleteTask = {this.handleDeleteTask}/>    
                <ToDoInput saveNewItem = {this.handleAddToDoItem}/> 
             </div>

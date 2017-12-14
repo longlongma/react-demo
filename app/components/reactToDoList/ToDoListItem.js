@@ -5,15 +5,19 @@ export default class ToDoListItem extends React.Component{
         super(props);
     }
     toggleComplete(){
-        this.props.toggleComplete(thi.props.taskId);
+        console.log(this);
+        console.log(this.props);
+        this.props.toggleComplete(this.props.taskId);
     }
     deleteTask(){
+        console.log(this);
+        console.log(this.props);
         this.props.deleteTask(this.props.taskId);
     }
     render(){
         let itemChecked;
         let task = this.props.task;
-        if(this.props.compolete==='true'){
+        if(this.props.complete==='true'){
             task = <del>{task}</del>;
             itemChecked = true;
         }else{
@@ -22,12 +26,12 @@ export default class ToDoListItem extends React.Component{
         return(
             <div>
                 <Row>
-                    <Col span={12}>
-                        <Checkbox  checked={itemChecked} onChange={this.toggleComplete}/>
+                    <Col span={20}>
+                        <Checkbox  checked={itemChecked} onChange={this.toggleComplete.bind(this)}/>
                         {task}
                     </Col>
-                    <Col span={12}>
-                        <Button type="danger" className="pull-right" onClick={this.deleteTask}>删除</Button>
+                    <Col span={4}>
+                        <Button type="danger" className="pull-right" onClick={this.deleteTask.bind(this)}>删除</Button>
                     </Col>
                 </Row>
             </div>
