@@ -24,19 +24,22 @@ export default class ToDoInput extends React.Component{
             element.value=""
         }
     }
+    handleKeyDown(e){
+        if(e.keyCode===13){
+            this.saveNewItem(e);
+        }
+    }
     render(){
         return(
-            <div>
+            <div className="todolist-inputItem">
                 <Form.Item >
                     <Row>
                         <Col span={20}>
-                        <Input id="newItem" ref="newItem" type="text" placeholder="吃饭睡觉打豆豆"/>
+                        <Input id="newItem" ref="newItem" type="text" placeholder="吃饭睡觉打豆豆" onKeyDown={this.handleKeyDown.bind(this)}/>
                         </Col>
                         <Col span={4}>
                         <Button type="primary" className="pull-right" onClick={this.saveNewItem}> 提交</Button>
                         </Col>
-                    
-                    
                     </Row>
                 </Form.Item>
                 

@@ -3,4 +3,14 @@
     min-height: 400px;
     border: 1px solid $dark-base;
     margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    
+}
+.todolist-inputItem{
+    margin-top: 10px;
+}
+.totalCount{
+    position: absolute;
+    bottom: 0
 }

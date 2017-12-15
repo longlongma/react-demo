@@ -1,5 +1,6 @@
 import React,{PropTypes} from 'react';
 import ToDoListItem from './ToDoListItem';
+import Divider from 'antd/lib/divider';
 export default class ToDoList extends React.Component{
     constructor(props){
         super(props);
@@ -15,10 +16,19 @@ export default class ToDoList extends React.Component{
                           deleteTask={this.props.deleteTask}
                           />  
         )
+        let completeTask = this.props.data.filter((item)=>item.complete==="true");
+
         return(
-            <ul className="list-group">
-                {taskList}
-            </ul>
+            <div>
+                <ul className="list-group">
+                    {taskList}
+                </ul>
+                <div>
+                    <span>总计/已完成：</span>
+                    <span>{this.props.data.length}/{completeTask.length}</span>
+                </div>
+            </div>
+            
         )
     }
 }

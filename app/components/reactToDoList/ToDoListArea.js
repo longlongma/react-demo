@@ -57,11 +57,11 @@ export default class ToDoListArea extends React.Component{
     render(){
         return(
             <div className="todolist-area">
+               <ToDoInput saveNewItem = {this.handleAddToDoItem}/> 
                <ToDoList 
                data={this.state.data} 
                toggleComplete={this.handleToggleComplete} 
                deleteTask = {this.handleDeleteTask}/>    
-               <ToDoInput saveNewItem = {this.handleAddToDoItem}/> 
             </div>
         )
     }
