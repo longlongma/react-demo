@@ -23,7 +23,7 @@ export default class ToDoList extends React.Component{
                 <ul className="list-group">
                     {taskList}
                 </ul>
-                <div>
+                <div className="totalCount">
                     <span>总计/已完成：</span>
                     <span>{this.props.data.length}/{completeTask.length}</span>
                 </div>
