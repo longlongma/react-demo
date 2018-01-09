@@ -4,7 +4,21 @@
   background-color: $gray-base;
   .title{
     text-align: center;
+    color: $light-base;
+    display: inline;
+    padding-left: 20px;
     line-height: 80px;
+  }
+}
+.header_menu {
+  display: inline-block;
+  float: right;
+  line-height: 80px;
+  padding-right: 20px;
+  li{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
     color: $light-base;
   }
 }
