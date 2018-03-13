@@ -15,10 +15,16 @@
   float: right;
   line-height: 80px;
   padding-right: 20px;
+  color: $light-base;
   li{
     float: left;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  .global_menu{
     color: $light-base;
+    &:hover{
+      color: $blue-base;
+    }
   }
 }

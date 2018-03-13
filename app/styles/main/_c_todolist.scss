@@ -14,3 +14,10 @@
     position: absolute;
     bottom: 0
 }
+
+.list_item{
+    padding: 3px 6px;
+    &:hover{
+        background-color: $blue-base;
+    }
+}
